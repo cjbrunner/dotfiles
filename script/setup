@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cp $PWD/../.bash_aliases ~/.bash_aliases
+cp /workspaces/.codespaces/.persistedshare/dotfiles/.bash_aliases ~/.bash_aliases
+source ~/.bash_aliases
 
 if [ -f /workspaces/github/script/setup-copilot ]; then
   echo "Setting up copilot..."
