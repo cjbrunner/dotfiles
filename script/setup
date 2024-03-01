@@ -1,14 +1,14 @@
 #!/bin/bash
 
-cp ../.bash_aliases ~/.bash_aliases
+cp $PWD/../.bash_aliases ~/.bash_aliases
 
-if [ -f /workspaces/github/script/setup-copilot]; then
+if [ -f /workspaces/github/script/setup-copilot ]; then
   echo "Setting up copilot..."
   cd /workspaces/github
   script/setup-copilot
 fi
 
-if [ -f /workspaces/github/bin/toggle-feature-flag]; then
+if [ -f /workspaces/github/bin/toggle-feature-flag ]; then
   echo "Setting copilot-custom-models feature flag..."
   cd /workspaces/github
   /workspaces/github/bin/toggle-feature-flag enable copilot-custom-models
