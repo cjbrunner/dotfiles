@@ -10,9 +10,3 @@ if [ -f /workspaces/github/script/setup-copilot ]; then
   echo "Setting up copilot..."
   script/setup-copilot
 fi
-
-if [ -f /workspaces/github/bin/toggle-feature-flag ]; then
-  echo "Setting copilot-custom-models feature flag..."
-  cd /workspaces/github
-  /workspaces/github/bin/toggle-feature-flag enable copilot-custom-models
-fi
