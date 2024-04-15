@@ -3,6 +3,12 @@
 cp /workspaces/.codespaces/.persistedshare/dotfiles/.bash_aliases ~/.bash_aliases
 source ~/.bash_aliases
 
+if [ -f /workspaces/github/script/setup-codespaces-orca ]; then
+  echo "Adding Orca..."
+  cd /workspaces/github
+  script/setup-codespaces-orca
+fi
+
 if [ -f /workspaces/github/script/setup-copilot ]; then
   echo "Updating dotcom..."
   cd /workspaces/github
